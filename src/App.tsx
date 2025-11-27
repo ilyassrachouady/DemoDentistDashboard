@@ -19,6 +19,7 @@ import SupportPage from './pages/dashboard/SupportPage';
 import SettingsPage from './pages/dashboard/SettingsPage';
 import PatientProfilePage from './pages/dashboard/PatientProfilePage';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 // Protected Route Component - Now just shows loading, no auth check needed
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -84,6 +85,7 @@ function App() {
       <AuthProvider>
         <AppRoutes />
         <Toaster />
+        <Analytics />
       </AuthProvider>
     </BrowserRouter>
   );
