@@ -165,7 +165,7 @@ export default function DashboardHome() {
                 </div>
                 <div>
                   <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold tracking-tight">
-                    {getTimeOfDay()}, Dr. {dentist?.name?.split(' ')[0]}
+                    {getTimeOfDay()}, Dr. {dentist?.name?.replace(/^Dr\.?\s*/i, '').split(' ')[0]}
                   </h1>
                   <p className="text-blue-100 mt-0.5 md:mt-1 text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
                     Tableau de bord professionnel • {format(new Date(), 'EEEE d MMMM yyyy', { locale: fr })}

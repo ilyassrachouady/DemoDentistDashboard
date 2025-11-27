@@ -53,9 +53,7 @@ export default function DashboardLayout() {
     navigate('/login');
   };
 
-  const bookingUrl = dentist?.bookingPageId 
-    ? `${window.location.origin}/dentist/${dentist.bookingPageId}`
-    : '';
+  const bookingUrl = `${window.location.origin}/book/dr-ahmed-benali`;
 
   const handleCopyBookingLink = () => {
     if (bookingUrl) {

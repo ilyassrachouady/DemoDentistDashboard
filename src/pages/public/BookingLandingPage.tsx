@@ -152,37 +152,37 @@ export default function BookingLandingPage() {
   };
 
   const dentist = {
-    name: 'Dr. Emily Carter',
-    specialty: 'Cardiologie | 12+ Années d\'Expérience',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400',
-    price: '250 DH',
-    rating: 4.8,
-    reviews: 230,
-    patients: '200+',
-    experience: '7 Ans',
-    bio: 'Spécialiste en soins dentaires avec plus de 12 ans d\'expérience. Passionné par l\'innovation et le confort des patients.',
-    address: '123 Avenue Mohammed V, Casablanca',
-    phone: '+212600000000',
-    email: 'dr.carter@dental.ma'
+    name: 'Dr. Ahmed Benali',
+    specialty: 'Orthodontie & Implantologie | 15+ Ans d\'Expérience',
+    image: 'https://media.licdn.com/dms/image/v2/C5603AQGKiAGKx1XIoQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1549063069279?e=2147483647&v=beta&t=7jtoycg_8WmeKjxzLfZQRPdrWdh0zy5GPPQr--1uq-w',
+    price: '300 MAD',
+    rating: 5.0,
+    reviews: 315,
+    patients: '500+',
+    experience: '15 Ans',
+    bio: 'Expert en orthodontie et implantologie, reconnu pour son approche moderne et humaine. Cabinet premium à Casablanca.',
+    address: 'Avenue Hassan II, Casablanca',
+    phone: '+212612345678',
+    email: 'dr.ahmed.benali@cabinet.ma'
   };
 
   const patientReviews = [
     {
-      name: 'Sarah Johnson',
+      name: 'Fatima Zahra',
       rating: 5,
-      comment: 'Service excellent ! Dr. Carter est très professionnelle et attentionnée.',
+      comment: 'Service excellent ! Dr. Ahmed Benali est très professionnel et attentionné.',
       date: 'Il y a 2 jours'
     },
     {
-      name: 'Ahmed Benali',
+      name: 'Youssef El Amrani',
       rating: 5,
-      comment: 'Meilleur dentiste à Casablanca. Très satisfait du résultat.',
+      comment: 'Meilleur dentiste à Casablanca. Très satisfait du résultat avec Dr. Ahmed Benali.',
       date: 'Il y a 1 semaine'
     },
     {
-      name: 'Maria Garcia',
+      name: 'Samira Bouzid',
       rating: 4,
-      comment: 'Excellente expérience, je recommande vivement !',
+      comment: 'Excellente expérience, je recommande vivement Dr. Ahmed Benali !',
       date: 'Il y a 2 semaines'
     }
   ];
