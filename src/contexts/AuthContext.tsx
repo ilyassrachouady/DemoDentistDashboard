@@ -22,19 +22,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isDemo, setIsDemo] = useState(false);
 
   useEffect(() => {
-    // Check for stored auth
-    const storedUser = storage.getItem('user');
-    const storedDentist = storage.getItem('dentist');
-    const demo = isDemoMode();
-
-    if (demo) {
+    // Always default to demo mode - no login required
       setUser(demoUser);
       setDentist(demoDentist);
       setIsDemo(true);
-    } else if (storedUser && storedDentist) {
-      setUser(storedUser);
-      setDentist(storedDentist);
-    }
+    storage.setItem('demoMode', true);
+    storage.setItem('user', demoUser);
+    storage.setItem('dentist', demoDentist);
     
     setIsLoading(false);
   }, []);
@@ -119,10 +113,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const logout = () => {
-    setUser(null);
-    setDentist(null);
-    storage.removeItem('user');
-    storage.removeItem('dentist');
+    // Always reset to demo mode instead of clearing
+    setUser(demoUser);
+    setDentist(demoDentist);
+    setIsDemo(true);
+    storage.setItem('demoMode', true);
+    storage.setItem('user', demoUser);
+    storage.setItem('dentist', demoDentist);
   };
 
   const setDemo = (enabled: boolean) => {
